@@ -1,0 +1,59 @@
+<header>
+<div><img src="/img/1.jpg" alt="" style="width: 100%;"></div>
+<div style="display: flex; flex-direction: row;">
+    <img src="" alt="" style="width: 10%;">
+    <nav style="width: 70%; ">
+        <!-- <ul style="display: flex; flex-direction: row; justify-content: center;">
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Plants</a>
+                <ul>
+                    <% menuItems.forEach(item => { %>
+                        <li><a href="<%= item.link %>"><%= item.name %></a></li>
+                      <% }); %>
+                </ul>
+            </li>
+            <li><a href="">Pest and Disease</a></li>
+            <li><a href="">Chemical</a></li>
+            <li><a href="">Fertilizers</a></li>
+            <li><a href="">HighTech Agriculture</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul> -->
+
+        <ul id="menu">
+            <% menuItems.forEach(item => { %>
+              <li class="has-dropdown">
+                <%= item.title %>
+                <ul class="dropdown">
+                  <% item.subitems.forEach(subitem => { %>
+                    <li>
+                      <a href="<%= subitem.linkTo %>"><%= subitem.namePage %></a>
+                    </li>
+                  <% }); %>
+                </ul>
+              </li>
+            <% }); %>
+          </ul>
+          
+
+    </nav>
+
+    
+    <nav style="width: 20%; ">
+        <ul style="display: flex; flex-direction: row; justify-content: center;">
+            <li><a href="" style="padding: 10%;">Buy</a></li>
+            <li><a href="" style="padding: 10%;">Event</a></li>
+        </ul>
+    </nav>
+</div>
+<div style="position: relative;">
+    <img src="/img/7.jpg" alt="" style="width: 100%;">
+    <div style="position: absolute; top: 45%; left: 15%; text-align: left; margin-right: 30%;">
+        <h1 style="color: white;"><strong>Organic Matter</strong></h1>
+        <p style="color: white;">Nếu trình soạn thảo của bạn (ví dụ: Visual Studio Code) báo lỗi expected css(css-rparentexpected) nhưng chương trình vẫn chạy đúng, có thể là do trình soạn thảo chưa nhận dạng đúng cú pháp trong một số trường hợp. Bạn có thể thử kiểm tra lại cú pháp hoặc kiểm tra lại các cài đặt của trình soạn thảo để đảm bảo rằng bạn không sử dụng lỗi cú pháp nào.</p>
+        <a href="" style="color: white; background-color: rgba(112, 112, 124, 0.5); padding: 1%; border-radius: 5%; border: 1px solid white;" >Xem thêm</a>
+    </div>
+</div>
+</header>

@@ -1,0 +1,21 @@
+@media screen and (min-width: 1024px) {
+    .menubar h3{
+        padding: 1%;
+        background-color: aquamarine;
+        border-radius: 5%;
+        margin: 1%;
+    }    
+    .click.active {
+        background-color: #ffcc00; /* Màu vàng để nổi bật */
+        color: #333;
+    }
+    .spanInside>span{
+        font-size: 20px;
+        margin: 4px;
+    }
+    .click{
+        background-color: burlywood;
+        margin: 5%;
+    }
+    
+}

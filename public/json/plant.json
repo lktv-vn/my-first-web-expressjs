@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name_pest_and_disease": "Bả trầu/\nNứt thân xì mũ",
+      "tac_nhan": "Do nấm Mycophaserella",
+      "trieu_chung": "Có thể là làm nứt thân và xì mũ tại vết nứt. Là những vết màu nâu, hình dạng tròn hoặc bất định, đường kính 1cm hoặc lớn hơn",
+      "thoi_diem_phat _benh": "Trong suốt thời gian sinh trưởng, đặc biệt khoảng 45 ngày sau khi trồng cây",
+      "bien_phap_phong_tru":"Sử dụng thuốc hóa học, các hoạt chất có thể bao gồm như ",
+      "link_avatar":"",
+      "link_img_phu":[]
+    },
+    {
+      "id": 2,
+      "name_pest_and_disease": "Bệnh đốm vòng",
+      "tac_nhan": "Do nấm Alternaria",
+      "trieu_chung": "là những đốm đen nhỏ đường kín không quá 1 cm có các vết đồng tâm",
+      "thoi_diem_phat _benh": "xuất hiện sớm sau khoảng 7 ngày sau khi trồng và xuyên suốt quá trình trồng",
+      "bien_phap_phong_tru":"Sử dụng thuốc hóa học, dọn dẹp tàn dư thực vật trước và sau khi trồng",
+      "link_avatar":"",
+      "link_img_phu":[]
+    },
+    {
+     "id": 3,
+      "name_pest_and_disease": "Vi khuẩn",
+      "tac_nhan": "Vi khuẩn Pseudomonas",
+      "trieu_chung": "Vết bệnh màu đen hình dạng bất định và dọc theo gân lá nhìn như sợi chỉ có thẻ to hoặc nhỏ, vết bệnh ẩm ướt",
+      "thoi_diem_phat _benh": "Sau khi mưa, và suốt thời gian canh tác",
+      "bien_phap_phong_tru":"Sử dụng thuốc hóa học, các hoạt chất có thể bao gồm như và khử trùng trước và sau khi trồng",
+      "link_avatar":"",
+      "link_img_phu":[]
+    },
+    {
+        "id": 4,
+         "name_pest_and_disease": "Vi khuẩn",
+         "tac_nhan": "Vi khuẩn Pseudomonas",
+         "trieu_chung": "Vết bệnh màu đen hình dạng bất định và dọc theo gân lá nhìn như sợi chỉ có thẻ to hoặc nhỏ, vết bệnh ẩm ướt",
+         "thoi_diem_phat _benh": "Sau khi mưa, và suốt thời gian canh tác",
+         "bien_phap_phong_tru":"Sử dụng thuốc hóa học, các hoạt chất có thể bao gồm như và khử trùng trước và sau khi trồng",
+         "link_avatar":"",
+         "link_img_phu":[]
+       }
+  ]
+  

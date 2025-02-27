@@ -1,0 +1,72 @@
+<footer>
+<br>
+    <div style="display: block; background-color: bisque; padding: 2%; color: black;">
+      
+      <!-- <div style="width: 100%; text-align: left;">
+        <div>
+          <h3>Về chúng tôi</h3>
+          <p>Chúng tôi là đơn vị chuyên cung cấp các sản phẩm thuốc bảo vệ thực vật và phân bón lá uy tín, cam kết mang đến giải pháp hiệu quả cho nhà nông. Với sứ mệnh đồng hành cùng bà con trong canh tác nông nghiệp bền vững, chúng tôi cung cấp các sản phẩm chất lượng, đáp ứng nhu cầu kiểm soát sâu bệnh và dinh dưỡng cây trồng.
+
+            Với nhiều năm kinh nghiệm trong lĩnh vực nông nghiệp, chúng tôi không chỉ là nhà cung cấp mà còn là người bạn đồng hành, sẵn sàng tư vấn và hỗ trợ kỹ thuật để giúp bà con đạt được mùa màng bội thu.</p>
+        </div>
+
+        <div>
+          <h3>Liên hệ</h3>
+          <p>
+            📍 Địa chỉ: [Địa chỉ cụ thể] <br>
+📞 Số điện thoại: [Số điện thoại] <br>
+📧 Email: [Email] <br>
+🌐 Website: [Tên website] <br>
+
+Hãy liên hệ ngay để được tư vấn và đặt hàng nhanh chóng!
+          </p>
+        </div>
+
+        <div>
+          <h3>Sản phẩm</h3>
+          <p>
+            Là đối tác tin cậy của nhiều công ty sản xuất thuốc bảo vệ thực vật và phân bón hàng đầu, chúng tôi mang đến một danh mục sản phẩm phong phú, đáp ứng đa dạng nhu cầu của bà con nông dân:
+
+Thuốc bảo vệ thực vật: Sản phẩm đặc trị sâu bệnh, nấm hại, thuốc trừ cỏ...
+Phân bón lá: Cung cấp dưỡng chất giúp cây phát triển khỏe mạnh, năng suất cao.
+Chế phẩm sinh học: An toàn, thân thiện với môi trường.
+Chúng tôi cam kết cung cấp giá cả hợp lý, hàng chính hãng với nguồn gốc rõ ràng, mang đến sự an tâm tuyệt đối cho bà con nông dân.
+
+
+          </p>
+        </div>
+
+        <div>
+          <h3>Chính sách bán hàng</h3>
+          <p>
+            Chúng tôi luôn mong muốn mang đến những ưu đãi tốt nhất cho khách hàng. Chính sách bán hàng của chúng tôi bao gồm:
+
+<br>🔹 Giảm giá theo số lượng: Mua càng nhiều, giá càng ưu đãi.
+<br>🔹 Khuyến mãi định kỳ: Giảm giá theo mùa vụ, hỗ trợ nhà nông tối đa.
+<br>🔹 Miễn phí vận chuyển: Cho đơn hàng từ [số tiền cụ thể] trở lên.
+<br>🔹 Tư vấn miễn phí: Đội ngũ chuyên gia luôn sẵn sàng hỗ trợ.
+<br>🔹 Hỗ trợ đổi trả: Nếu sản phẩm lỗi từ nhà sản xuất.
+
+<br>Chúng tôi cam kết mang đến chất lượng - giá trị - sự hài lòng cho từng khách hàng!
+
+
+          </p>
+        </div>
+      </div> -->
+
+      <div style="width: 100%;">
+        <div>
+          <% listMainMenu.forEach(element => { %>
+            <h3 style="text-align: left;"><%= element.name %></h3>
+            <ul style="display: flex; flex-wrap: wrap; margin-left: 0; padding: 0;">
+              <% Array.from(element.ls).forEach(elements => { %>
+                <li style=" font-size: 15px; text-align: left; margin-left: 0; margin-top: 0; padding-top: 0; padding-right: 1%;"><%= elements.nameGroup %></li>
+              <% }) %>
+            </ul>
+          <% }) %>
+        </div>
+      </div>
+
+    </div>
+
+</footer>

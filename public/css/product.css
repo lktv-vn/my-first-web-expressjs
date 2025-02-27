@@ -1,0 +1,10 @@
+.product:hover{
+    background-color: rgb(109, 71, 26);
+}
+.cty * {
+    margin: 0px;
+    padding: 5px;
+}
+.menu_product>li:hover{
+    background-color: aquamarine;
+}

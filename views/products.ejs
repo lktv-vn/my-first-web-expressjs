@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+    <div class="cty" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px;">
+        <br>
+        <h1>CÔNG TY TNHH XNK TÂN HỒNG MINH</h1>
+        <p>Địa chỉ: Số nhà A1-02, Khu đô thị Phúc An City, xã Mỹ Hạnh Nam, huyện Đức Hòa, Long An</p>
+        <p>Điện thoại: 0765533338   ||  Email: tanhongminh1902@gmail.com</p>
+        <br>
+        <h3 id="gh">BẢNG GIÁ HÀNG CHÍNH SÁCH</h3>
+        <h5>(Kính gửi quý đại lí.)</h5>
+    </div>
+    <h1 id="show-header" style="display: block; text-align: center;"></h1>
+    <div id="co" style="min-height: 300px; box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.6); display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+        <!-- cot nay là phan loai -->
+        <div style="width: 10%;">
+            <% const lsProduct = new Set() %>
+            <% productMenu.forEach(element => { %>
+                <% lsProduct.add(element._type)%>
+            <% }) %>
+            <ul>
+                <% lsProduct.forEach(element => { %>
+                    <li ><%= element %></li>
+                <% }) %>
+            </ul>
+        </div>
+        <!-- cot nay la doi tuong -->
+         <div style="width: 15%;">
+            <ul class="menu_product">
+                <li class="dao_on">Đạo ôn</li>
+                <li class="nam">Nấm</li>
+                <li class="khuan">Vi khuẩn</li>
+                <li class="sau">Sâu</li>
+                <li class="ray">Chích hút</li>
+                <li class="oc">Ốc</li>
+                <li class="tien_mat">Tiền Mặt</li>
+                <li class="pbl">Phân bón lá</li>
+            </ul>
+         </div>
+         <!-- day la cot hoat chat -->
+          <div style="width: 60%;">
+            <div>
+                <ul class="mmo" style="display: flex; flex-wrap: wrap;">
+                    <% productMenu.forEach(element => { %>
+                            <li class="<%= element.code_type %>" style="display: none; list-style-type: none; margin: 1.5%; border: 1px solid orange; padding: 1%;"><%= element.hoat_chat %></li>
+                    <% }) %>
+                </ul>
+                
+
+            </div>
+          </div>
+    </div><br>
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div style="width: 15%; border: 1px solid salmon; display: none;">
+            <!-- day la menu ne -->
+        </div>
+        <div style="width: 80%;">
+            <div class="jko" style="display: flex; flex-wrap: wrap; justify-content: center; ">
+                <% productMenu.forEach(element => { %>
+                    <% if (element.img) { %>
+                        <div class="product <%= element.code_type %>" style="display: block; width: 20%; border: 1px solid pink; padding: 1%; margin: 1%;">
+                            <h2 style="text-align: center; color: rgb(29, 116, 51);"><%= element._type %></h2>
+                            <h1><%= element.ten_thuoc %></h1>
+                            <img style="width: 100%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);" src="/img/thm/<%= element.img.trim() %>" alt="<%= element.ten_thuoc %>">
+                            
+                            <h3><%= element.hoat_chat %></h3>
+                            <p><%= element.doi_tuong %></p>
+                            <p>Liều dùng: <strong><%= element.dose_25l %> (ml/g)/25L, hoặc <%= element.dose_per_ha %> (ml/g)/ha</strong></p>
+                            <p>Quy cách: <strong><%= element.quy_cach_dong_goi %></strong> x <%= element.so_luong_per_thung %> (chai/gói)</p>
+                            <p>Giá phân phối: <strong class="product-inside" style="color: rgb(126, 20, 158);"><%= element.price %></strong></p>
+                            <p>(<%= element.price_thung %>)</p>
+                            
+                            <p>Liên hệ: <strong>0983266713 (gặp Khôi)</strong></p>
+                        </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/js/product.js"></script>
+</body>
+</html>

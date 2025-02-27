@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Gọi header -->
+    <%- include('partials/header') %>
+        <main>
+            <h1>Chào mừng đến với Website của chúng tôi.</h1>
+            <p>
+                Chúng tôi chia sẽ các thông tin, kiến thức hữu ích trong nông nghiệp mà có thể bạn quan tâm.
+            </p>
+            <p>
+                Hãy cùng khám phá nhé.
+            </p>
+<!-- begin body -->
+            <h1>Đây là bài viết nổi bật</h1>
+            <div class="text-fm-all" style="display: flex; flex-wrap: wrap; justify-content: center; font-size: 14px; padding: 3%; padding-top: 0;">
+                
+                <% for( let index = 0; index < 5; index++ ) { %>
+                    <div style="margin: 1%; min-width: 250px; flex: 1 1 35%;  display: flex; flex-direction: row;">
+                        <div style="width: 25%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);">
+                            <img src="/img/11.JPG" alt="" style="padding: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 1%;">
+                        </div>
+                        <div style="background-color: white; width: 75%; text-align: left; padding-left: 3%; border-radius: 1%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3)">
+                            <h3>Danh sách các bài viết nổi bật</h3>
+                            <h5>Danh sách các bài viết nổi bật</h5>
+                            <p>Tóm lại, khoảng trống hai bên không phải là “lãng phí” 
+                                mà là một phần quan trọng giúp website chuyên nghiệp,
+                                 dễ đọc và tối ưu trải nghiệm người dùng. 🚀</p>
+                        </div>
+                    </div>
+                <% } %>
+                
+            </div>
+            <div  style="padding: 3%;">
+                <h1>Phân bón trong canh tác nông nghiệp</h1>
+                <div class="text-fm-all" style="display: flex; flex-wrap: wrap; justify-content: center; font-size: 14px;">
+                    <% for( let index = 0; index < 5; index++ ) { %>
+                        <div style="margin: 5px; padding: 20px; width: 30%; height: 200px; background-color: white; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);;">
+                            <div style="height: 70%;">
+                              <h3>Driver & Diagnostics</h3>
+                              
+                            <p>Update drivers and automatically detect common hardware issues.</p>
+                            </div>
+                            <div style="display: flex; padding: 5px; justify-content: center;">
+                              <span style="font-weight:500; color: rgb(18, 103, 214); margin-right: 2%;; border-radius: 5%; border: 1px solid rgb(18, 103, 214); padding: 5px;">Drivers</span>
+                              <span style="font-weight:700; color: rgb(18, 103, 214); margin-right: 2%;; border-radius: 5%; border: 1px solid rgb(18, 103, 214); padding: 5px;">Supports</span>
+                            </div>
+                          </div>
+                    <% } %>
+                </div>
+            </div>
+            <div  style="padding: 3%;">
+                <h1>Sâu bệnh hại cây trồng</h1>
+                <div class="text-fm-all" style="padding: 3%;  display: flex; flex-wrap: wrap; justify-content: center; padding-top: 0;">
+                    <% for( let index = 0; index < 6; index++ ) { %>
+                        <div class="boxshadow" style="width: 30%; font-size: 10px; text-align: left; position: relative; ; border: 3px solid rgb(209, 207, 202); margin: 1%; background-color: white; " >
+                            <div style="min-height: 300px;">
+                                <img src="/img/DSC_6841.JPG" alt="" style="padding: 0; width: 100%; height: auto; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3)">
+                            </div>
+                            <div style="margin-left: 1%;">
+                                <h3>Driver & Diagnostics</h3>
+                                <p> <strong>Lượt xem: 105.000</strong> </p>
+                            </div>
+                            <!-- mark giảm giá -->
+                            <div style="display: none; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6); border-radius: 60%; width: 30%; height: 10%; background-color: rgb(74, 248, 126); position: absolute; top: 15%; left: -2%;"></div>
+                        </div>
+                    <% } %>
+                </div> 
+            </div>
+
+            <div  style="padding: 3%; ">
+                <h1>Kỹ thuật canh tác</h1>
+                <div class="text-fm-all"  style="padding: 3%;  display: flex; flex-wrap: wrap; justify-content: center; padding-top: 0; ">
+                    <% for( let index = 0; index < 3; index++ ) { %>
+                        <div style="background-color: white; width: 30%; min-height: 600px; font-size: 18px; text-align: left; position: relative; ;  margin: 1%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);" >
+                            <div style=" min-height: 100px;">
+                                <img src="/img/DSC_6841.JPG" alt="" style="padding: 0; width: 100%; min-height: 100px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);">
+                            </div>
+                            <div style="margin: 5%; height: 60%;">
+                                <div >
+                                    <h3>Driver & Diagnostics</h3>
+                                    <p>Lists in UI design come with multiple images or text 
+                                    options to save interface space and integrate UI interactions
+                                    effectively. They help designers add on to the visual appeal of 
+                                    a project and bring users a unique experience.</p>
+                                </div>
+                                <br>
+                                <p > <strong>Lượt xem: 105.000</strong> </p>
+                                <span>Xem thêm</span>
+                            </div>
+                            <!-- mark -->
+                            <div style=" display: none; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); border-radius: 60%; width: 30%; height: 10%; background-color: rgb(74, 248, 126); position: absolute; top: 15%; left: -2%;"></div>
+                        </div>
+                    <% } %>
+                </div> 
+            </div>
+
+            <div>
+
+                <div style="width: 90%; text-align: left; padding: 5%;">
+                    <div>
+                      <h3>Về chúng tôi</h3>
+                      <p>Chúng tôi là đơn vị chuyên cung cấp các sản phẩm thuốc bảo vệ thực vật và phân bón lá uy tín, cam kết mang đến giải pháp hiệu quả cho nhà nông. Với sứ mệnh đồng hành cùng bà con trong canh tác nông nghiệp bền vững, chúng tôi cung cấp các sản phẩm chất lượng, đáp ứng nhu cầu kiểm soát sâu bệnh và dinh dưỡng cây trồng.
+            
+                        Với nhiều năm kinh nghiệm trong lĩnh vực nông nghiệp, chúng tôi không chỉ là nhà cung cấp mà còn là người bạn đồng hành, sẵn sàng tư vấn và hỗ trợ kỹ thuật để giúp bà con đạt được mùa màng bội thu.</p>
+                    </div>
+            
+                    <div>
+                      <h3>Liên hệ</h3>
+                      <p>
+                        📍 Địa chỉ: [Địa chỉ cụ thể] <br>
+            📞 Số điện thoại: [Số điện thoại] <br>
+            📧 Email: [Email] <br>
+            🌐 Website: [Tên website] <br>
+            
+            Hãy liên hệ ngay để được tư vấn và đặt hàng nhanh chóng!
+                      </p>
+                    </div>
+            
+                    <div>
+                      <h3>Sản phẩm</h3>
+                      <p>
+                        Là đối tác tin cậy của nhiều công ty sản xuất thuốc bảo vệ thực vật và phân bón hàng đầu, chúng tôi mang đến một danh mục sản phẩm phong phú, đáp ứng đa dạng nhu cầu của bà con nông dân:
+            
+            Thuốc bảo vệ thực vật: Sản phẩm đặc trị sâu bệnh, nấm hại, thuốc trừ cỏ...
+            Phân bón lá: Cung cấp dưỡng chất giúp cây phát triển khỏe mạnh, năng suất cao.
+            Chế phẩm sinh học: An toàn, thân thiện với môi trường.
+            Chúng tôi cam kết cung cấp giá cả hợp lý, hàng chính hãng với nguồn gốc rõ ràng, mang đến sự an tâm tuyệt đối cho bà con nông dân.
+            
+            
+                      </p>
+                    </div>
+            
+                    <div>
+                      <h3>Chính sách bán hàng</h3>
+                      <p>
+                        Chúng tôi luôn mong muốn mang đến những ưu đãi tốt nhất cho khách hàng. Chính sách bán hàng của chúng tôi bao gồm:
+            
+            <br>🔹 Giảm giá theo số lượng: Mua càng nhiều, giá càng ưu đãi.
+            <br>🔹 Khuyến mãi định kỳ: Giảm giá theo mùa vụ, hỗ trợ nhà nông tối đa.
+            <br>🔹 Miễn phí vận chuyển: Cho đơn hàng từ [số tiền cụ thể] trở lên.
+            <br>🔹 Tư vấn miễn phí: Đội ngũ chuyên gia luôn sẵn sàng hỗ trợ.
+            <br>🔹 Hỗ trợ đổi trả: Nếu sản phẩm lỗi từ nhà sản xuất.
+            
+            <br>Chúng tôi cam kết mang đến chất lượng - giá trị - sự hài lòng cho từng khách hàng!
+            
+            
+                      </p>
+                    </div>
+                  </div>
+
+                <h1>chính sách nhà phân phối</h1>
+                <h1>cập nhật tình hình dịch hại</h1>
+            </div>
+<!-- end body -->
+            <% menuItems.forEach(item=> { %>
+                <% if (item.subitems && item.subitems.length> 0 && item.subitems[0].linkTo) { %>
+                    <div style="border: 1px solid wheat; display: none;">
+                        <h1 style="text-align: left; margin-left: 10.5%;">
+                            <%= item.title %>
+                        </h1>
+                        <p style="text-align: left; margin-left: 10.5%;">Nơi đây mô tả giới thiệu mời gọi vào xem nội
+                            dung bên
+                            trong</p>
+                        <div>
+                            <div style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
+                                <div class="dexuat" style="background-image: url('<%= item.subitems[0].linkTo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div style="height: 70%;"></div>
+                                    <div style="height: 30%; background-color: rgba(255, 255, 255, 0.5);display: flex; justify-content: center;">
+                                        <h3 style="width: 80%;  margin: 1%;">Click vào tiêu đề để chuyển trang nè bạn ơi</h3>
+                                    </div>
+                                </div>
+                                <div class="dexuat" style="background-image: url('<%= item.subitems[1].linkTo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div style="height: 70%;"></div>
+                                    <div style="height: 30%; background-color: rgba(255, 255, 255, 0.5);display: flex; justify-content: center;">
+                                        <h3 style="width: 80%;  margin: 1%;">Click vào tiêu đề để chuyển trang nè bạn ơi</h3>
+                                    </div>
+                                </div>
+                                <div class="dexuat" style="background-image: url('<%= item.subitems[2].linkTo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div style="height: 70%;"></div>
+                                    <div style="height: 30%; background-color: rgba(255, 255, 255, 0.5);display: flex; justify-content: center;">
+                                        <h3 style="width: 80%;  margin: 1%;">Click vào tiêu đề để chuyển trang nè bạn ơi</h3>
+                                    </div>
+                                </div>
+                                <div class="dexuat" style="background-image: url('<%= item.subitems[3].linkTo %>'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div style="height: 70%;"></div>
+                                    <div style="height: 30%; background-color: rgba(255, 255, 255, 0.5);display: flex; justify-content: center;">
+                                        <h3 style="width: 80%;  margin: 1%;">Click vào tiêu đề để chuyển trang nè bạn ơi</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <% } %> <!-- Phần tử sẽ chỉ được render nếu có linkTo -->
+                        <% }); %>
+
+
+        </main>
+
+        <!-- Gọi footer -->
+        <%- include('partials/footer') %>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>

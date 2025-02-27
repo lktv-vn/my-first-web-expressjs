@@ -1,0 +1,83 @@
+li{
+    list-style-type: none;
+    padding: 2%;
+}
+/* Dropdown */
+/* Đặt kiểu cho menu chính */
+#menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+  
+  /* Các mục trong menu */
+  #menu > li {
+    position: relative;
+    margin: 0 15px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  /* Các liên kết trong menu */
+  #menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  /* Hiệu ứng khi hover */
+  #menu li:hover > a {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+  
+  /* Ẩn các dropdown mặc định */
+  #menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  /* Hiển thị dropdown khi hover vào mục có dropdown */
+  #menu li:hover .dropdown {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  /* Hiệu ứng mờ khi hiển thị dropdown */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Các liên kết trong dropdown */
+  #menu .dropdown li a {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  #menu .dropdown li a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+  /* Hết dropdown */
+
+  .dexuat{
+    height: 200px;
+    width: 20%;
+    background-color: rgb(194, 191, 165);
+    margin: 0.5%;
+  }

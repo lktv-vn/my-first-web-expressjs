@@ -1,0 +1,34 @@
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: lightgreen; /* Màu nền thay đổi khi là điện thoại */
+        font-size: 18px; /* Kích thước chữ nhỏ lại */
+        padding: 20px; /* Padding nhỏ hơn */
+    }
+
+    .header {
+        font-size: 28px; /* Kích thước chữ tiêu đề nhỏ hơn */
+        color: darkgreen;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menubar h3{
+        padding: 1%;
+        font-size: 17px;
+        border-radius: 5%;
+        margin: 1%;
+
+    }   
+    .menubar div{
+        background-color: aquamarine;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5%;
+    }
+    #css-for-span-1 span, #css-for-span span{
+        font-size: 30px;
+    }
+    
+}

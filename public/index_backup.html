@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        .button-item{
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .container {
+            width: 100%; /* Chiều rộng của thẻ div */
+            height: 100%; 
+            /* border: 15px solid yellow; Để dễ thấy thẻ div */
+            
+            background-image: url('./img/bg_1.jpg'); /* Đặt hình ảnh làm nền */
+            background-size: cover; /* Hình ảnh phủ toàn bộ thẻ div */
+            /*background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+            background-position: center; /* Căn giữa hình ảnh */
+        }
+
+        .bv{
+            width: 25%;
+            /* background-color: blueviolet; */
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./img/header.jpg" style="width: 100%;" >
+        <div style="display: flex; background-color: beige;">
+            <!-- background-color: rgb(214, 84, 84) -->
+            <div style="width: 10%; justify-content: center; align-items: center; display: flex; background-color: beige;"><img src="./img/logo-YouTube.png" style="width: 100px; height: 50px; justify-content: center; align-items: center; display: flex; "></div>
+            <div style="width: 80%; align-items: center; display: flex; justify-content: left;">
+                <ul class="menu button-item" id="menu" style="background-color: beige; margin-left: 20px;"></ul>
+                <!-- <script src="scripts.js"></script>   -->
+                <!-- <button class="button-item">Home</button>
+                <button class="button-item">Plant</button>
+                <button class="button-item">Pest and disease</button>
+                <button class="button-item">Pesticides</button>
+                <button class="button-item">Fertilizer</button>
+                <button class="button-item">Contact</button> -->
+            </div>
+            <div style="width: 15%;  align-items: center; display: flex; justify-content: right; background-color: beige;">
+                <button class="button-item">Products</button>
+                <button class="button-item">Event</button>
+            </div>
+        </div>
+        <div><h2 style="text-align: center; font-size: 40px; color: yellowgreen;">Discover, Learn and Savor Every Moment.</h2></div>
+    </div>
+    <!-- <div style="height: 300px; border: 1px solid red; display: flex; width: 100%;">
+        <div style="width: 30%;"> <img src="sp.jpg" alt="" style="height: 300px; "></div>
+        <div style="width: 70%; text-align: center; " class="moveImg">
+            <div style="height: 70%;"></div>
+            <div style="height: 30%; ">
+                <div style="display: flex; width: 100%; justify-content: center; "> 
+                    <img src="square.jpg" alt="" style="width: 5%; height: auto; margin: 5px;">
+                    <img src="square.jpg" alt="" style="width: 5%; height: auto; margin: 5px;">
+                    <img src="square.jpg" alt="" style="width: 5%; height: auto; margin: 5px;">
+                    <img src="square.jpg" alt="" style="width: 5%; height: auto; margin: 5px;">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="firstContent" style="display: flex; width: 100%;"></div>
+    <div style="height: 5px; background-color: white;"></div>
+    <div class="container">
+        <!-- <div style="border: 1px solid red; height: 100px;"></div> -->
+
+        <div id="hot-content" style="height: 100%;"></div>
+
+        <!-- <div style=" height: 700px; display: flex; width: 100%;">
+            <div class="bv" >
+                <div style="display: block; height: 550px; width: 300px; background-color: aqua; display: block;">
+                    <div style="height: 30%; ;">
+                        <img src="baiviet1_4.jpg" alt="" style="width: 100%; height: 100%; ">
+                    </div>
+                    <div style="height: 70%; "></div>
+                </div>
+            </div>
+            <div style="width: 25%;" class="bv">
+                <div style="display: block; height: 550px; width: 300px; background-color: aqua;">
+                    <div style="height: 30%; ">
+                        <img src="baiviet1_4.jpg" alt="" style="width: 100%; height: 100%; ">
+                    </div>
+                    <div style="height: 70%; "></div>
+                </div>
+            </div>
+            <div class="bv" style="width: 25%; ">
+                <div style="display: block; height: 550px; width: 300px; background-color: aqua;">
+                    <div style="height: 30%; ">
+                        <img src="baiviet1_4.jpg" alt="" style="width: 100%; height: 100%; ">
+                    </div>
+                    <div style="height: 70%; "></div>
+                </div>
+            </div>
+            <div class="bv" style="width: 25%;">
+                <div style="display: block; height: 550px; width: 300px; background-color: aqua;">
+                    <div style="height: 30%; ">
+                        <img src="baiviet1_4.jpg" alt="" style="width: 100%; height: 100%; ">
+                    </div>
+                    <div style="height: 70%; "></div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div style="height: 20px;"></div>
+    <div id="theDivLon" class="cTheDivLon"></div>
+    <!-- <div style="display: block; height: 800px; ">
+        <div style="height: 10%; "></div>
+        <div style="height: 80%; display: flex; position: relative;">
+            <div style="background-image: url('blend1.jpg'); width: 60%; height: 100%;"></div>
+            <div style="background-image: url('blend2.jpg'); width: 40%; height: 100%;"></div>
+            <div style="position: absolute; background-image: url('sp.jpg'); width: 40%; height: 80%; background-repeat: no-repeat; top: 15%; left: 45%;"></div>
+        </div>
+        <div style="height: 10%; "></div>
+    </div> -->
+    <hr>
+    <div id="menu-footer" class="vidu"></div>
+    <!-- <div style="height: 400px; display: flex;">
+        <div style="background-color: aquamarine; width: 20%;"></div> 
+        <div style="background-color: rgb(185, 221, 22); width: 15%;"></div> 
+        <div style="background-color: rgb(187, 50, 241); width: 15%;"></div> 
+        <div style="background-color: aquamarine; width: 15%;"></div> 
+        <div style="background-color: rgb(255, 40, 112); width: 15%;"></div> 
+        <div style="background-color: aquamarine; width: 20%;"></div> 
+    </div> -->
+
+    <div id="kk"></div>
+    <script type="module" src="../js/script.js"></script>  
+</body>
+</html>
