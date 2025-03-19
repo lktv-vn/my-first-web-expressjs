@@ -1,3 +1,5 @@
 node_modules/
 .env
 *.log
+# git config --global user.email "tanturv@gmail.com"
+# git remote add origin https://github.com/lktv-vn/my-first-web-expressjs.git
