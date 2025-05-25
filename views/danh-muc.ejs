@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="/css/danh-muc.css" >
+    <link rel="stylesheet" href="/css/header.css" >
+    <link rel="stylesheet" href="/css/home-body.css" >
+    <link rel="stylesheet" href="/css/styles.css" >
+    
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1 >Tra cứu danh mục thuốc bảo vệ thực vật</h1>
+    <form action="/danh-muc/submit" method="GET">
+        <!-- Ô nhập từ khóa -->
+        <input type="text" name="keyword" placeholder="Nhập từ khóa..." required>
+      
+        <!-- Danh sách chọn -->
+        <select name="type" required>
+          <option value="hoatchat">Tên hoạt chất</option>
+          <option value="congty">Tên công ty</option>
+          <option value="doituong">Đối tượng phòng trừ</option>
+        </select>
+      
+        <!-- Nút gửi -->
+        <button type="submit" class="button-table-click">Tìm kiếm</button>
+      </form>
+      <%- include('partials/footer') %>
+  <script type="module" src="/js/danh-muc.js"></script>    
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>

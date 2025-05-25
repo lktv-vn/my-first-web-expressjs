@@ -1,4 +1,63 @@
+.menu_pest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue; /* Màu nền cho menu */
+    padding: 10px; /* Padding cho menu */
+}
+.menu_pest h3 {
+    border: 1px solid #ccc; /* Đường viền cho tiêu đề */
+    margin: 02%; /* Xóa margin cho tiêu đề */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2%; /* Padding cho tiêu đề */
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    color: darkblue; /* Màu chữ tiêu đề */
+}
+
+
+.menus {
+    display: block;
+  }
+  ul.menus li {
+    /* Các thuộc tính mặc định cho li */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Tạo hiệu ứng chuyển màu mượt mà */
+}
+
+ul.menus  li:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover, có thể thay đổi theo ý muốn */
+}
+.menu-sidebar{
+    display: block;
+    width: 20%;
+    background-color: rgb(17, 61, 75);
+}
+
+h2 {
+    background-color: #6c9b5e;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 8px solid greenyellow;
+    list-style-type: none;
+}
+
+.right-content{
+    width: 80%;
+    /* background-color: #191f18; */
+}
+.body-content{
+    flex-direction: row;
+    padding: 0 15%;
+}
 @media screen and (max-width: 480px) {
+    .body-content{
+        flex-direction: column;
+        padding: 0;
+    }
     .container {
         background-color: lightgreen; /* Màu nền thay đổi khi là điện thoại */
         font-size: 18px; /* Kích thước chữ nhỏ lại */
@@ -10,7 +69,7 @@
         color: darkgreen;
     }
 }
-
+/* 
 @media screen and (min-width: 1024px) {
     .menubar h3{
         padding: 1%;
@@ -29,4 +88,4 @@
     }
     
     
-}
+} */

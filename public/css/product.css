@@ -8,3 +8,31 @@
 .menu_product>li:hover{
     background-color: aquamarine;
 }
+.jko>div{
+    width: 20%;
+}
+.product-content-inside{
+    display: flex;
+    flex-direction: column;
+}
+.product-content-inside>div{
+    width: 100%;
+}
+@media(max-width: 480px){
+    .jko div{
+        width: 90%;
+        padding: 0px 3px;
+    }
+    .product-content-inside{
+        display: flex;
+        flex-direction:  row;
+        font-size: 0.6rem;
+    }
+
+    .product-list{
+        width: 100%;
+    }
+    .product h2{
+        display: none;
+    }
+}

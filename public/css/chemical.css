@@ -1,21 +1,93 @@
-@media screen and (min-width: 1024px) {
-    .menubar h3{
-        padding: 1%;
-        background-color: aquamarine;
-        border-radius: 5%;
-        margin: 1%;
-    }    
-    .click.active {
-        background-color: #ffcc00; /* Màu vàng để nổi bật */
-        color: #333;
+.zzz {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    /* margin: 20px; */
+    line-height: 1.6;
+    /* background-color: rgb(31, 105, 128); */
+    /* padding: 3%; */
+    text-align: left;
+    width: 60%;
+    border-radius: 8px;
+}
+.intro-text ul>li{
+    list-style-type: disc;
+    padding: 0;
+}
+.zzz>section {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.zzz h2 {
+    border-left: 10px solid #395331;
+    padding-left: 10px;
+    color: #56d3cd;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.luuy {
+    background-color: #6c9b5e;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 8px solid greenyellow;
+    list-style-type: none;
+    margin: 2%;
+}
+
+.frac-group-list>li{
+    font-size: 0.75rem;
+    border: 1px solid darkgoldenrod;
+    margin: 1%;
+    width: 28%;
+    padding: 1%;
+    border-radius: 2%;
+    background-color: rgb(215 243 169);
+}
+.frac-group-list>li:hover{
+    border: 1px solid darkgoldenrod;
+    margin: 1%;
+    width: 28%;
+    padding: 1%;
+    background-color: rgba(78, 194, 155, 0.3);
+    border-radius: 2%;
+    cursor: pointer;
+}
+.cc a{
+    width: 40%;
+}
+.cc a:hover{
+    color: blueviolet;
+}
+#breadcrumb{
+    text-align: center;
+    margin: 1rem 0;
+}
+@media(max-width: 480px){
+    .zzz{
+        width: 100%;
     }
-    .spanInside>span{
-        font-size: 20px;
-        margin: 4px;
+    .zzz section{
+        margin: 10px 10px;
+        padding: 10px;
     }
-    .click{
-        background-color: burlywood;
-        margin: 5%;
+    .frac-group-list{
+        padding: 0;
     }
-    
+    .frac-group-list li{
+        width: 100%;
+        list-style: none;
+    }
+    .zzz>p{
+        padding: 10px;
+    }
+    .cc{
+        display: flex;
+        flex-direction: column;
+    }
+    .cc a{
+        width: 100%;
+        padding: 10px 0;
+    }
 }

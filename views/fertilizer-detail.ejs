@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fertilizers</title>
+    <!-- <link rel="stylesheet" href="/css/fer-tong_quan.css"> -->
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/fertilizers.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+        
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+        
+        <main class="right-content">
+            <div id="breadcrumb"></div>
+            <%- smallMenu.content%>
+        </main>
+        <h3 style="text-align: center; font-size: 1.8rem;">Có thể bạn muốn xem </h3>
+        <section class="cc">
+
+            <% allMenu.forEach((element, index)=> { %>
+                <a href="/home-topic/fertilizers/<%= element.id %>" class="add-more topic-tag">
+                    <%= element.long_name %>
+                </a>
+
+                <% }) %>
+        </section>
+        <%- include('partials/footer') %>
+            <!-- <script type="module" src="/js/ferti-tong_quan.js"></script> -->
+
+            <script type="module" src="/js/script.js"></script>
+            <script type="module" src="/js/breadcrumb.js"></script>
+</body>
+
+</html>

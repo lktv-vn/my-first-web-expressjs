@@ -1,83 +1,49 @@
-li{
-    list-style-type: none;
-    padding: 2%;
+.zzzz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
 }
-/* Dropdown */
-/* Đặt kiểu cho menu chính */
-#menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    
-  }
-  
-  /* Các mục trong menu */
-  #menu > li {
-    position: relative;
-    margin: 0 15px;
-    padding: 10px;
-    font-size: 15px;
-  }
-  
-  /* Các liên kết trong menu */
-  #menu a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
-    display: block;
-  }
-  
-  /* Hiệu ứng khi hover */
-  #menu li:hover > a {
-    background-color: #f0f0f0;
-    color: #007bff;
-  }
-  
-  /* Ẩn các dropdown mặc định */
-  #menu .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  
-  /* Hiển thị dropdown khi hover vào mục có dropdown */
-  #menu li:hover .dropdown {
-    display: block;
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
-  }
-  
-  /* Hiệu ứng mờ khi hiển thị dropdown */
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Các liên kết trong dropdown */
-  #menu .dropdown li a {
-    padding: 10px;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  #menu .dropdown li a:hover {
-    background-color: #f0f0f0;
-    color: #007bff;
-  }
-  /* Hết dropdown */
+.z5 {
+  width: 50%;
+}
 
-  .dexuat{
-    height: 200px;
-    width: 20%;
-    background-color: rgb(194, 191, 165);
-    margin: 0.5%;
-  }
+.cc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  padding: 1%;
+  gap: 15px;
+
+}
+/* .cc a{
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 4px 4px;
+  height: 2rem;
+  text-decoration: none;
+  margin: 4px 0;
+} */
+.topic-tag {
+  text-decoration: none;
+  background-color: #e9f5e9;
+  color: var(--primary-color);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.95em;
+  font-weight: 600;
+  border: 1px solid #c8e6c9;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  color: #4caf50;
+  
+}
+.cc a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

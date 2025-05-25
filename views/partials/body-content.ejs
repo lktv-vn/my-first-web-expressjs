@@ -1,0 +1,44 @@
+
+<section style="background-color: aliceblue; padding: 2%;"><h1><%= smallMenu[idMenu]._name %></h1></span></section>
+
+<div style="display: flex; flex-direction: row; width: 100%;">
+
+    <!-- left menu -->
+    <div style="display: block; width: 20%; background-color: aqua; margin-top: 1%; ">
+      <section>
+        <h2>Côn trùng</h2>  
+      <ul class="menus menu-1" style="color: blueviolet; ">
+        <% smallMenu.forEach(_name => { %>
+         <% if (_name.id_group==1) { %>
+            <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+         <% } %>
+        <% }) %>
+      </ul>
+      </section>
+      <section>
+        <h2>Nấm</h2>
+        <ul class="menus menu-2" style="color: rgb(86, 226, 43); ">
+            <% smallMenu.forEach(_name => { %>
+             <% if (_name.id_group==2) { %>
+                <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+             <% } %>
+            <% }) %>
+          </ul>
+      </section>
+      <section>
+        <h2>Khuẩn</h2>
+        <ul class="menus menu-3" style="color: rgb(51, 91, 201);">
+            <% smallMenu.forEach(_name => { %>
+             <% if (_name.id_group==3) { %>
+                <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+             <% } %>
+            <% }) %>
+          </ul>
+      </section>
+    </div>
+
+    <!-- right content -->
+    <div style="width: 80%;  background-color: #191f18;">
+         <%- smallMenu[idMenu].contents %>     
+    </div>
+</div>

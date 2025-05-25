@@ -6,85 +6,63 @@
     <title>Pest</title>
     <link rel="stylesheet" href="/css/pest.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/mobile480px.css">
     <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 <body>
-    <div style="display: none;">
-        <!-- <img src="./img/6771.jpg" style="width: 100%;" alt=""> -->
-    </div>
-    <div style="display: none;">
-        <!-- <img src="./img/header.jpg" style="width: 100%;" alt=""> -->
-    </div>
 
     <%- include('partials/header') %>
-    <div style="display: flex; flex-direction: row; justify-content: center;" class="menubar">
-        <% const lsMenu = [{name: 'nam', full: 'Nấm'}, {name: 'khuan', full: 'Khuẩn'}, {name: 'con_trung', full: 'Côn trùng'}, {name: 'co_dai', full: 'Cỏ dại'}, {name: 'dich_hai_khac', full: 'Dịch hại khác'}] %>
-        <% lsMenu.forEach((ls, index) => { %>
-            <div id="<%= ls.name %>">
-                <h3><%= ls.full %></h3>
-                <ul style="display: none;">
-                    <% const lsSubMenu = new Set();%>
-                    <%smallMenu.filter(sm=>sm.pest_id === index+1).forEach(sm=>{ %>
-                        <% lsSubMenu.add(sm); %>
-                    <% }); %>
-                    <% lsSubMenu.forEach(ls => { %>
-                        <li data-user-id="<%= ls.pest_id %>"><h3><%= ls.nameGroup %></h3></li>
-                    <% }); %>
-                </ul>
-            </div>
-        <% }) %>
+
+
+    <section style="background-color: aliceblue; padding: 5px 0; text-align: center; font-size: 2rem "><h1 style="display: inline-block; border-bottom: 2px solid black;" ><%= smallMenu[idMenu]._name %></h1></span></section>
+  <div id="breadcrumb" style="text-align: center; padding: 10px 0;"></div>
+    <div class="body-content" style="display: flex;  justify-content: center; max-width: 1200px; ">
+
+        <!-- left menu -->
+        <div class="menu-sidebar">
+          <section>
+            <h2>Côn trùng</h2>  
+          <ul class="menus menu-1" style="color: #2be0e2; ">
+            <% smallMenu.forEach(_name => { %>
+             <% if (_name.id_group==1) { %>
+                <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+             <% } %>
+            <% }) %>
+          </ul>
+          </section>
+          <section>
+            <h2>Nấm</h2>
+            <ul class="menus menu-2" style="color: rgb(86, 226, 43); ">
+                <% smallMenu.forEach(_name => { %>
+                 <% if (_name.id_group==2) { %>
+                    <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+                 <% } %>
+                <% }) %>
+              </ul>
+          </section>
+          <section>
+            <h2>Khuẩn</h2>
+            <ul class="menus menu-3" style="color: rgb(201 170 51);">
+                <% smallMenu.forEach(_name => { %>
+                 <% if (_name.id_group==3) { %>
+                    <li style="list-style-type: disc;" data_user_id = <%= _name.id %>><%= _name._name %></li>
+                 <% } %>
+                <% }) %>
+              </ul>
+          </section>
+        </div>
+
+        <!-- right content -->
+        <div class="right-content">
+             <%- smallMenu[idMenu].contents %>     
+        </div>
     </div>
     
-    <div style="display: flex; flex-direction: row; width: 100%;">
-        <div style="display: flex; flex-direction: column; width: 20%; padding-left: 2%; padding-right: 1%; padding-top: 1%; background-color: bisque; margin-top: 2%; margin-left: 5%;">
-            <div>
-                <h2>
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <%= smallMenu[idMenu].nameGroup %>
-                    <% } %>
-                </h2>
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: left;">
-                <ul>
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <% smallMenu.filter(smItem => smItem.numGroup === smallMenu[idMenu].numGroup).forEach(smItem => { %>
-                            <li class="<%= smItem.id %>"><%= smItem.active %></li>
-                        <% }) %>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
-        <div style="width: 100%; padding-left: 2%; padding-top: 1%; background-color: rgb(29, 127, 151); margin-top: 2%; margin-left: 1%; margin-right: 5%;">
-            <div style="display: flex; flex-direction: row; padding: 0px;">
-                <div style="width: 40%; display: flex; justify-content: center; align-items: center;">
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <img src="<%= smallMenu[idMenu].img %>" style="width: 100%;" alt="" onerror="this.style.display= 'none'">
-                    <% } %>
-                </div>
-                <div style="width: 60%; display: flex; flex-direction: column; text-align: left; padding-left: 5%;">
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <span><strong id="namePest" style="font-size: 20px;"><%= smallMenu[idMenu].namePest %></strong></span><br>
-                        <span>Kí chủ: <br><strong id="hostPlant"><%= smallMenu[idMenu].hostPlant%></strong></span><br>
-                        <span>Hoạt chất phòng trị: <br><strong id="activeControl"><%= smallMenu[idMenu].activeControl %></strong></span><br>
-                        <span>Biện pháp quản lí: <br><strong id="prevention"><%= smallMenu[idMenu].prevention %></strong></span><br>
-                        <span>Giải thích: <br><strong id="expand_plant"><%= smallMenu[idMenu].expand_plant %></strong></span><br>
-                        <!-- tesst -->
-                        <span>Giải thích: <br><strong id="expand_plant"><%- smallMenu[idMenu].descriable %></strong></span><br>
-                    <% } %>
-                </div>
-            </div>
-            <div><h4>Thông tin hoạt chất ở đây</h4></div>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center;">
-        <h1 id="vidu" data-user-id="123">
-            <pre>
-                đây là tiêu đề <br>đây là dòng thứ 1\n
-                đây là dòng thứ 2\n
-            </pre>
-        </h1>
-    </div>
     <%- include('partials/footer') %>
+    <script type="module" src="/js/breadcrumb.js"></script>
     <script type="module" src="/js/pest.js"></script>
     <script type="module" src="/js/script.js"></script>
 </body>

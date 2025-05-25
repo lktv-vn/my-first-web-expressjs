@@ -1,0 +1,166 @@
+/* topics-style.css */
+
+/* Banner cho trang chủ đề (tùy chỉnh từ .header-img) */
+.topic-banner {
+    height: 250px; /* Chiều cao nhỏ hơn banner chính */
+    background-image: url(https://placehold.co/1920x400/66BB6A/FFFFFF?text=Chủ+Đề+Nông+Nghiệp); /* Ảnh nền khác */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.topic-banner h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.topic-banner p {
+    font-size: 1.1em;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Container chính cho trang */
+.topics-page-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Grid layout cho các thẻ card */
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tạo các cột tự động co giãn */
+    gap: 30px; /* Khoảng cách giữa các card */
+}
+
+/* Kiểu cho từng thẻ card */
+.topic-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 77, 64, 0.1);
+    overflow: hidden; /* Đảm bảo bo tròn được áp dụng cho ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Để thẻ a chiếm toàn bộ card */
+    flex-direction: column;
+}
+
+.topic-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 77, 64, 0.15);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Kế thừa màu chữ từ cha */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Đảm bảo link chiếm toàn bộ chiều cao card */
+}
+
+.card-image-container {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định cho vùng ảnh */
+    overflow: hidden; /* Cắt ảnh nếu nó không vừa */
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh che phủ toàn bộ, có thể bị cắt */
+    transition: transform 0.4s ease;
+}
+
+.topic-card:hover .card-image-container img {
+    transform: scale(1.1); /* Hiệu ứng zoom nhẹ khi hover */
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Để phần content chiếm không gian còn lại nếu card có chiều cao khác nhau */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #1B5E20; /* Màu xanh lá đậm cho tiêu đề card */
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #424242; /* Màu xám đậm cho mô tả */
+    flex-grow: 1; /* Để mô tả chiếm không gian còn lại, giúp các nút "Xem thêm" (nếu có) thẳng hàng */
+    margin-bottom: 15px; /* Khoảng cách trước khi có thể có nút Xem thêm */
+}
+
+/* Optional: Kiểu cho nút "Xem thêm" nếu bạn muốn thêm vào mỗi card */
+/*
+.card-button {
+    display: inline-block;
+    background-color: #FFCA28;
+    color: #212529;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto; // Đẩy nút xuống dưới cùng của card-content
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #FFB300;
+}
+*/
+
+/* Đánh dấu active cho mục menu Chủ đề */
+.main-menu li.active {
+    color: #4CAF50;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50; /* Hoặc một kiểu khác bạn thích */
+}
+
+
+/* Footer cơ bản */
+
+
+
+/* Responsive cho grid và card trên mobile */
+@media (max-width: 768px) {
+    .topic-banner {
+        height: 200px;
+    }
+    .topic-banner h1 {
+        font-size: 1.8em;
+    }
+    .topic-banner p {
+        font-size: 1em;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr; /* 1 cột trên mobile */
+        gap: 20px;
+    }
+    .topics-page-container {
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+    .card-title {
+        font-size: 1.3em;
+    }
+    .card-description {
+        font-size: 0.9em;
+    }
+}

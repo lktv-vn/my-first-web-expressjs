@@ -1,34 +1,179 @@
-@media screen and (max-width: 480px) {
-    .container {
-        background-color: lightgreen; /* Màu nền thay đổi khi là điện thoại */
-        font-size: 18px; /* Kích thước chữ nhỏ lại */
-        padding: 20px; /* Padding nhỏ hơn */
-    }
-
-    .header {
-        font-size: 28px; /* Kích thước chữ tiêu đề nhỏ hơn */
-        color: darkgreen;
-    }
+.zzz {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    /* background-color: rgb(31, 105, 128); */
+    /* padding: 15%; */
+    /* padding-top: 3%; */
+    padding-bottom: 3%;
+    text-align: left;
+    /* border: 1px solid fuchsia; */
 }
 
-@media screen and (min-width: 1024px) {
-    .menubar h3{
-        padding: 1%;
-        font-size: 17px;
-        border-radius: 5%;
-        margin: 1%;
+.zzz li {
+    list-style-type: disc;
+    padding: 0;
+}
 
-    }   
-    .menubar div{
-        background-color: aquamarine;
-        width: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0.5%;
+.zzz>section {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.zzz h2 {
+    border-left: 10px solid #3b9994;
+    padding-left: 10px;
+    color: rgb(5 59 67);
+    text-align: left;
+    font-size: 1.7rem;
+}
+
+h3 {
+    /* color: #fff; */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    background-color: #6c9b5e;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 8px solid greenyellow;
+    list-style-type: none;
+}
+
+h1 {
+
+    /* text-align: center; */
+    /* color: #fff; */
+    font-size: 2rem;
+    /* margin-bottom: 20px; */
+    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+.menus {
+    display: block;
+}
+
+ul.menus li {
+    /* Các thuộc tính mặc định cho li */
+    border-bottom: 2px solid rgb(17, 61, 75);
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Tạo hiệu ứng chuyển màu mượt mà */
+}
+
+ul.menus li:hover {
+    background-color: #f0f0f0;
+    /* Màu nền khi hover, có thể thay đổi theo ý muốn */
+}
+
+
+.menu-sidebar {
+    display: block;
+    width: 20%;
+    background-color: rgb(17, 61, 75);
+    padding: 0 10px;
+
+}
+
+.right-content {
+    width: 80%;
+    /* background-color: #191f18; */
+}
+.img-under-header{
+    margin-top: 70px;
+}
+@media (max-width: 480px) {
+    .img-under-header{
+        margin-top: 50px;
     }
-    #css-for-span-1 span, #css-for-span span{
-        font-size: 30px;
+    .menu-sidebar {
+        display: none;
+        width: 20%;
+        background-color: aqua;
+        margin-top: 1%;
+    }
+    .right-content {
+        width: 100%;
+        /* background-color: #191f18; */
+    }
+    .right-content li{
+        margin-right: 5px;
+    }
+    .zzz {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+        margin: 0px;
+        line-height: 1.6;
+        /* background-color: rgb(31, 105, 128); */
+        padding: 3% 10px;
+        text-align: left;
     }
     
+    .zzz li {
+        list-style-type: disc;
+        padding: 0;
+    }
+    
+    .zzz>section {
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        
+    }
+    
+    .zzz h2 {
+        border-left: 10px solid #3b9994;
+        padding-left: 10px;
+        color: #56d3cd;
+        text-align: left;
+        font-size: 1.4rem;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    }
+    
+    h3 {
+        color: #000000;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    h2 {
+        background-color: #6c9b5e;
+        padding: 10px;
+        border-radius: 5px;
+        border-left: 8px solid greenyellow;
+        list-style-type: none;
+ 
+    }
+    
+    h1 {
+        /* text-align: center; */
+        color: #000000;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .menus {
+        display: block;
+    }
+    
+    ul.menus li {
+        /* Các thuộc tính mặc định cho li */
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* Tạo hiệu ứng chuyển màu mượt mà */
+    }
+    
+    ul.menus li:hover {
+        background-color: #f0f0f0;
+        /* Màu nền khi hover, có thể thay đổi theo ý muốn */
+    }
 }

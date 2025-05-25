@@ -1,0 +1,210 @@
+/* --- Biến màu sắc và font (Tùy chỉnh nếu muốn) --- */
+:root {
+    --hero-bg-color: #f4f7f0; /* Màu nền nhẹ nhàng hơn */
+    --primary-color: #127A3A; /* Màu xanh lá cây chính (rgb(18, 122, 58)) */
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #fefefe; /* Màu trắng hơi ngà */
+    --button-hover-bg: #0e5e2d; /* Màu xanh đậm hơn khi hover */
+    --border-light: #e0e0e0;
+    /* --font-sans: 'Arial', sans-serif; Hoặc font bạn thích: 'Lato', 'Roboto', etc. */
+}
+
+/* --- Container chính --- */
+.product-hero {
+    background-color: var(--hero-bg-color);
+    padding: 40px 20px; /* Padding trên dưới nhiều hơn, trái phải ít hơn */
+}
+
+.hero-container {
+    max-width: 1100px; /* Giới hạn chiều rộng tối đa */
+    margin: 0 auto;   /* Căn giữa */
+    background-color: #fff; /* Nền trắng cho nội dung bên trong */
+    padding: 30px;
+    border-radius: 12px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ nhàng */
+}
+
+/* --- Layout 2 cột --- */
+.product-layout {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống hàng trên màn hình nhỏ */
+    gap: 40px;       /* Khoảng cách giữa 2 cột */
+    align-items: flex-start; /* Căn các cột theo đỉnh */
+}
+
+.product-column {
+    flex: 1; /* Chia đều không gian */
+    min-width: 280px; /* Chiều rộng tối thiểu cho mỗi cột */
+}
+
+/* Cột hình ảnh */
+.product-image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa hình ảnh và thông tin */
+    text-align: center;
+}
+
+.product-bottle-img {
+    max-width: 35%; /* Giới hạn chiều rộng ảnh */
+    height: auto;
+    display: block;
+    margin-bottom: 25px;
+    /* filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15)); /* Đổ bóng cho chai nếu muốn */
+}
+
+/* Thông tin dưới chai */
+.product-info {
+    width: 100%; /* Chiếm hết chiều rộng cột */
+}
+
+.product-name {
+    color: var(--primary-color);
+    font-size: 2.5em; /* Cỡ chữ lớn cho tên sản phẩm */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-benefit {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+    font-weight: normal; /* Bỏ in đậm mặc định của h3 */
+}
+
+/* Cột thành phần, công dụng */
+.product-features-column h2 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color); /* Gạch chân tiêu đề */
+    display: inline-block; /* Để gạch chân vừa với chữ */
+}
+
+.feature-list {
+    list-style: none; /* Bỏ dấu chấm đầu dòng mặc định */
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    /* color: var(--text-dark); */
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-left: 25px; /* Tạo khoảng trống cho icon */
+    position: relative; /* Để định vị icon */
+}
+
+/* Thêm icon check đơn giản */
+.feature-list li::before {
+    content: '✓'; /* Hoặc dùng icon font / svg */
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px; /* Điều chỉnh vị trí dọc nếu cần */
+    font-size: 1.1em;
+}
+
+.feature-list li strong {
+    color: var(--text-dark); /* Phân biệt phần nhấn mạnh */
+}
+
+/* Khu vực đặt hàng */
+.order-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Nền hơi khác biệt */
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: var(--text-medium);
+    margin-top: 15px; /* Khoảng cách với nút */
+    margin-bottom: 0;
+}
+
+/* --- Styling nút chung --- */
+.button {
+    display: inline-block; /* Để nút có kích thước vừa nội dung + padding */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Bo góc nhiều hơn */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Bỏ gạch chân cho thẻ <a> */
+    margin-top: 20px; /* Khoảng cách nút với nội dung trên */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút "Xem thêm" */
+.button-details {
+    background-color: #e0e0e0; /* Màu nền xám nhạt */
+    color: var(--text-dark);
+    border: 1px solid #ccc;
+    width: 80%; /* Chiều rộng giống HTML gốc */
+    max-width: 250px; /* Giới hạn chiều rộng */
+}
+
+.button-details:hover {
+    background-color: #d5d5d5;
+}
+
+/* Nút "Đặt Hàng Ngay" */
+.button-order {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    width: auto; /* Để nút tự động co giãn */
+    padding: 15px 40px; /* Padding lớn hơn cho nút chính */
+}
+
+.button-order:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+    .product-hero{
+        padding: 20px;
+        line-height: 1;
+    }
+    .product-layout {
+        flex-direction: column; /* Chuyển thành 1 cột */
+        gap: 30px;
+    }
+    .product-image-column{
+        flex-direction: row;
+    }
+    .product-column {
+        min-width: 100%; /* Chiếm hết chiều rộng */
+    }
+    .product-bottle-img {
+        max-width: 35%; /* Giảm kích thước ảnh trên mobile */
+    }
+    .product-name {
+        font-size: 2em;
+    }
+    .product-features-column h2 {
+        font-size: 1.4em;
+    }
+    .button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .button-order {
+        padding: 12px 30px;
+    }
+}

@@ -4,90 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fertilizers</title>
-    <link rel="stylesheet" href="/css/fertilizers.css">
+    <!-- <link rel="stylesheet" href="/css/fer-tong_quan.css"> -->
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/fertilizers.css">
     <link rel="stylesheet" href="/css/styles.css">
+    
 </head>
 <body>
-    <div style="display: none;">
-        <!-- <img src="./img/6771.jpg" style="width: 100%;" alt=""> -->
-    </div>
-    <div style="display: none;">
-        <!-- <img src="./img/header.jpg" style="width: 100%;" alt=""> -->
-    </div>
-
+   
     <%- include('partials/header') %>
-
-    <div style="display: flex; flex-direction: row; justify-content: center;" class="menubar">
-        <% const lsMenu = [{name: 'phan_don', full: 'Phân đơn'}, {name: 'complex', full: 'Phân hỗn hợp'}, {name: 'micro', full: 'Phân vi lượng'}, {name: 'other', full: 'Các loại phân khác'}] %>
-        <% lsMenu.forEach((ls, index) => { %>
-            <div id="<%= ls.name %>">
-                <h3><%= ls.full %></h3>
-                <ul  style="display: none;">
-                    <% const lsSubMenu = new Set();%>
-                    <%smallMenu.filter(sm=>sm.fertilizer_id === index+1).forEach((sm)=>{ %>
-                        <% lsSubMenu.add(sm); %>
-                    <% }); %>
-                    <% lsSubMenu.forEach(lss => { %>
-                        <li data-user-id=<%= lss.id %>><h3><%= lss.fullName %></h3></li>
-                    <% }); %>
-                </ul>
-            </div>
-        <% }) %>
-    </div>
-
-    <div style="display: flex; flex-direction: row; width: 100%;">
-        <div style="display: flex; flex-direction: column; width: 20%; padding-left: 2%; padding-right: 1%; padding-top: 1%; background-color: bisque; margin-top: 2%; margin-left: 5%;">
-            <div>
-                <h2>
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <%= smallMenu[idMenu].nameGroup %>
-                    <% } %>
-                </h2>
-            </div>
-            <div style="display: flex; flex-direction: column; text-align: left;">
-                <ul>
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <% smallMenu.filter(smItem => smItem.nameGroup === smallMenu[idMenu].nameGroup).forEach(smItem => { %>
-                            <li class="clickSub" data-user-id="<%= smItem.id %>"><%= smItem.fullName %></li>
-                        <% }) %>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
-        <div style="width: 100%; padding-left: 2%; padding-top: 1%; background-color: rgb(29, 127, 151); margin-top: 2%; margin-left: 1%; margin-right: 5%;">
-            <div style="display: flex; flex-direction: row; padding: 0px;">
-                <div style="width: 40%; display: flex; justify-content: center; align-items: center;">
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <img src="<%= smallMenu[idMenu].img %>" style="width: 100%;" alt="" onerror="this.style.display= 'none'">
-                    <% } %>
-                </div>
-                <div id="css-for-span" style="width: 60%; display: flex; flex-direction: column; text-align: left; padding-left: 5%;">
-                    <% if (smallMenu && smallMenu[idMenu]) { %>
-                        <span>Tên gọi: <br><strong><%=smallMenu[idMenu].sortName %></strong></span><br>
-                        <span>Tên đầy đủ: <br><strong><%=smallMenu[idMenu].fullName %></strong></span><br>
-                        <span>Công thức hóa học: <br><strong><%=smallMenu[idMenu].congThuc %></strong></span><br>
-                        <span>Thành phần phân bón: <br><strong><%=smallMenu[idMenu].percentIngredient %></strong></span><br>
-                        <span>Mô tả phân bón: <br><strong><%=smallMenu[idMenu].desriable %></strong></span><br>
-                        <span>Công dụng phân bón: <br><strong><%=smallMenu[idMenu].forUsed %></strong></span><br>
-                        <span>Sử dụng cho cây trồng: <br><strong><%=smallMenu[idMenu].forPlants %></strong></span><br>
-                        <span>Đọc kỹ hướng dẫn sử dụng trước khi dùng: <br><strong><%=smallMenu[idMenu].orther %></strong></span><br>
-                    <% } %>
-                </div>
-            </div>
-            <div><h4>Thông tin hoạt chất ở đây</h4></div>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center;">
-        <h1 id="vidu" data-user-id="123">
-            <pre>
-                đây là tiêu đề <br>đây là dòng thứ 1\n
-                đây là dòng thứ 2\n
-            </pre>
-        </h1>
-    </div>
+    
+    <main style="display: flex; flex-direction: column; justify-content: center;align-items: center; text-align: left;">
+        <div id="breadcrumb"></div>
+        <%- include('partials/fertilizer-tong_quan') %>
+    </main>
+    
     <%- include('partials/footer') %>
-    <script type="module" src="/js/fertilizer.js"></script>
+    <!-- <script type="module" src="/js/ferti-tong_quan.js"></script> -->
+    <script>
+        document.querySelectorAll('.add-more ul>li[data_user_id]').forEach(item => {
+            const span = document.createElement('span');
+            span.textContent = 'Xem thêm';
+            item.appendChild(span)
+            item.addEventListener('click', () => {
+                const id = item.getAttribute("data_user_id") 
+                window.location.href = '/home-topic/fertilizers/' + id
+            })
+            item.style.cursor = 'pointer'
+    })
+
+    
+    </script>
+    <script type="module" src="/js/breadcrumb.js"></script>
     <script type="module" src="/js/script.js"></script>
 </body>
 </html>

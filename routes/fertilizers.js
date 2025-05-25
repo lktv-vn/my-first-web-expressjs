@@ -7,10 +7,11 @@ const smallMenu = [];
 const listItem = [];
 router.get('/', async(req,res)=>{
     try {
+        const a =14;
         const [rows, fields] = await pool.query(`
-            SELECT * FROM fertilizer.contents
+            SELECT * FROM fertilizer.content_v2 where id = ${a}
             `)
-            // console.log(rows);
+            console.log(rows);
             res.render('fertilizers',{content: listItem, smallMenu: rows, idMenu: 0});
     } catch (error) {
         console.log(error)
@@ -23,12 +24,16 @@ router.get('/:userId', async(req,res)=>{
 
     try {
         const [rows, fields] = await pool.query(`
-            SELECT * FROM fertilizer.contents
+            SELECT * FROM fertilizer.content_v2
             `)
-            res.render('fertilizers',{content: listItem, smallMenu: rows, idMenu: userId-1})
+            //`
+            // SELECT * FROM fertilizer.content_v2 where id = ?
+            // `,[userId]
+            console.log(rows.length);
+            res.render('fertilizer-detail',{smallMenu: rows[userId-1], allMenu: rows})
     } catch (error) {
         console.log(error)
-        res.status(500).sned("Lỗi máy chủ");
+        res.status(500).send("Lỗi máy chủ");
     }
 
 });

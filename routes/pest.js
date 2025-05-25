@@ -8,7 +8,7 @@ const listItem = [];
 router.get('/', async(req,res)=>{
     try {
         const [rows, fields] = await pool.query(`
-            SELECT * FROM pest.contents
+            SELECT * FROM pest.content_v2
             `)
             res.render('pest',{content: listItem, smallMenu: rows, idMenu: 9})
     } catch (error) {
@@ -22,8 +22,9 @@ router.get('/:userId', async(req,res)=>{
 
     try {
         const [rows, fields] = await pool.query(`
-            SELECT * FROM pest.contents
+            SELECT * FROM pest.content_v2
             `)
+            console.log({ smallMenu: rows});
             res.render('pest',{content: listItem, smallMenu: rows, idMenu: userId-1})
     } catch (error) {
         console.log(error)

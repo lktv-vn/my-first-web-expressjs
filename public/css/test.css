@@ -1,0 +1,44 @@
+.zzz {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    /* background-color: rgb(31, 105, 128); */
+    /* padding: 15%; */
+    /* padding-top: 3%; */
+    padding-bottom: 3%;
+    text-align: left;
+}
+
+.zzz>section {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.zzz h2 {
+    border-left: 10px solid #395331;
+    padding-left: 10px;
+    color: #fff;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+
+
+.zzz li {
+    list-style-type: disc;
+    color: rgb(22, 97, 107);
+    padding: 0;
+}
+
+.zzz h2 {
+    color: rgb(5 59 67);
+}
+.luuy {
+    background-color: #6c9b5e;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 8px solid greenyellow;
+    list-style-type: none;
+}

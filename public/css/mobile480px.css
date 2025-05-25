@@ -1,0 +1,92 @@
+
+@media (max-width: 480px) {
+    .menu-sidebar {
+        display: none;
+        width: 20%;
+        background-color: aqua;
+        margin-top: 1%;
+    }
+    .right-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* background-color: #191f18; */
+    }
+    .right-content li{
+        margin-right: 5px;
+    }
+    .zzz {
+        width: 90%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+        margin: 0px;
+        line-height: 1.6;
+        /* background-color: rgb(255, 255, 255); */
+        /* padding: 3% 10px; */
+        text-align: left;
+    }
+    
+    .zzz li {
+        list-style-type: disc;
+        padding: 0;
+    }
+    
+    .zzz>section {
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        
+    }
+    
+    .zzz h2 {
+        border-left: 10px solid #3b9994;
+        padding-left: 10px;
+        color: #56d3cd;
+        text-align: left;
+        font-size: 1.4rem;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    }
+    
+    h3 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    h2 {
+        background-color: #6c9b5e;
+        padding: 10px;
+        border-radius: 5px;
+        border-left: 8px solid greenyellow;
+        list-style-type: none;
+ 
+    }
+    
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .menus {
+        display: block;
+    }
+    
+    ul.menus li {
+        /* Các thuộc tính mặc định cho li */
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* Tạo hiệu ứng chuyển màu mượt mà */
+    }
+    
+    ul.menus li:hover {
+        background-color: #f0f0f0;
+        /* Màu nền khi hover, có thể thay đổi theo ý muốn */
+    }
+}

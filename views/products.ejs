@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home-body.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
 <body>
+    <%- include('partials/header') %>
     <div class="cty" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px;">
         <br>
         <h1>CÔNG TY TNHH XNK TÂN HỒNG MINH</h1>
@@ -48,7 +52,7 @@
             <div>
                 <ul class="mmo" style="display: flex; flex-wrap: wrap;">
                     <% productMenu.forEach(element => { %>
-                            <li class="<%= element.code_type %>" style="display: none; list-style-type: none; margin: 1.5%; border: 1px solid orange; padding: 1%;"><%= element.hoat_chat %></li>
+                            <li class="<%= element.code_type %>" style="display: none; list-style-type: none; margin: 1.5%; border: 1px solid orange; padding: 1%; "><%= element.hoat_chat %></li>
                     <% }) %>
                 </ul>
                 
@@ -60,23 +64,27 @@
         <div style="width: 15%; border: 1px solid salmon; display: none;">
             <!-- day la menu ne -->
         </div>
-        <div style="width: 80%;">
+        <div class="product-list">
             <div class="jko" style="display: flex; flex-wrap: wrap; justify-content: center; ">
                 <% productMenu.forEach(element => { %>
                     <% if (element.img) { %>
-                        <div class="product <%= element.code_type %>" style="display: block; width: 20%; border: 1px solid pink; padding: 1%; margin: 1%;">
+                        <div class="product <%= element.code_type %>" style="display: block;  border: 10px solid rgb(42, 121, 185); padding: 1%; margin: 1%; border-radius: 8px; background-color: white;">
                             <h2 style="text-align: center; color: rgb(29, 116, 51);"><%= element._type %></h2>
                             <h1><%= element.ten_thuoc %></h1>
-                            <img style="width: 100%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);" src="/img/thm/<%= element.img.trim() %>" alt="<%= element.ten_thuoc %>">
-                            
-                            <h3><%= element.hoat_chat %></h3>
-                            <p><%= element.doi_tuong %></p>
-                            <p>Liều dùng: <strong><%= element.dose_25l %> (ml/g)/25L, hoặc <%= element.dose_per_ha %> (ml/g)/ha</strong></p>
-                            <p>Quy cách: <strong><%= element.quy_cach_dong_goi %></strong> x <%= element.so_luong_per_thung %> (chai/gói)</p>
-                            <p>Giá phân phối: <strong class="product-inside" style="color: rgb(126, 20, 158);"><%= element.price %></strong></p>
-                            <p>(<%= element.price_thung %>)</p>
-                            
-                            <p>Liên hệ: <strong>0983266713 (gặp Khôi)</strong></p>
+                            <div class="product-content-inside">
+                                <div>
+                                    <img style="width: 100%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);" src="/img/thm/<%= element.img.trim() %>" alt="<%= element.ten_thuoc %>">
+                                    <h3><%= element.hoat_chat %></h3>
+                                </div>
+                                <div class="product-detail">
+                                    <p><%= element.doi_tuong %></p>
+                                    <p>Liều dùng: <strong><%= element.dose_25l %> (ml/g)/25L, hoặc <%= element.dose_per_ha %> (ml/g)/ha</strong></p>
+                                    <p>Quy cách: <strong><%= element.quy_cach_dong_goi %></strong> x <%= element.so_luong_per_thung %> (chai/gói)</p>
+                                    <p>Giá phân phối: <strong class="product-inside" style="color: rgb(126, 20, 158);"><%= element.price %></strong></p>
+                                    <p>(<%= element.price_thung %>)</p>
+                                    <p>Liên hệ: <strong>0983266713 (gặp Khôi)</strong></p>
+                                </div>
+                            </div>
                         </div>
                     <% } %>
                 <% }) %>
@@ -84,5 +92,6 @@
         </div>
     </div>
     <script type="module" src="/js/product.js"></script>
+    <script type="module" src="/js/script.js"></script>
 </body>
 </html>

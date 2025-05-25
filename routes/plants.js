@@ -7,7 +7,7 @@ const smallMenu = [];
 const listItem = [];
 router.get('/', async(req,res)=>{
     try {
-        const [rows, fields] = await pool.query(`SELECT * FROM plant.contents`);
+        const [rows, fields] = await pool.query(`SELECT * FROM plant.content_v2`);
             res.render('plants',{content: listItem, smallMenu: rows, idMenu: 0})
     } catch (error) {
         console.log(error)
@@ -20,9 +20,9 @@ router.get('/:userId', async(req,res)=>{
 
     try {
         const [rows, fields] = await pool.query(`
-            SELECT * FROM plant.contents
+            SELECT * FROM plant.content_v2
             `)
-            res.render('plants',{content: listItem, smallMenu: rows, idMenu: userId-1})
+            res.render('plants',{smallMenu: rows, idMenu: userId-1})
     } catch (error) {
         console.log(error)
         res.status(500).sned("Lỗi máy chủ");

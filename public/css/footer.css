@@ -1,0 +1,36 @@
+
+footer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: rgb(22, 97, 107);
+    gap: 10px;
+    line-height: 1.7;
+}
+footer section{
+    margin: 15px 0;
+    width: 25%;
+    padding: 30px 30px;
+    color: white;
+    /* background-color: white; */
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer h1{
+    color: #00f1ff;
+    border-bottom: 2px solid #00f1ff;
+}
+@media(max-width: 480px){ 
+    footer{
+        flex-direction: column;
+        
+    }
+    footer section{
+        width: 90%;
+        padding: 0px 30px;
+    }
+}

@@ -1,0 +1,198 @@
+.my-header{
+    display: flex;
+    flex-direction: column;
+    
+}
+.logo{
+    width: 50%;
+    /* padding-left: 5%; */
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-menu{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-menu ul{
+    
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+.main-menu li{
+    max-width: 100%;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    font-weight: 700;
+}
+.main-menu li:hover{
+    border-bottom: 2px solid rgb(44, 188, 207);
+    transition: boder-bottom 0.3s ease;
+    cursor: pointer;
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    /* margin: 1%; */
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: #1c4a5f;
+    padding: 10px 0;
+    border-bottom: 2px solid white;
+    color: white;
+
+}
+.header-img{
+    /* border-radius: 20px 0 0 0; */
+    margin-top: 70px;
+    justify-content: center;   
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(141, 141, 141, 0.5), rgba(255, 255, 255, 0.5)), url(/img/logo-bg-content.jpg) no-repeat center center / cover; 
+
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://placehold.co/1920x600/a9d8b8/eee?text=Ảnh+Nền) no-repeat center center / cover;  */
+}
+.header-img-title{
+    font-size: 4rem;
+    padding: 0;
+    font-weight: 700;
+}
+.header-img-content{
+    font-size: 1.6rem;
+    padding: 0;
+}
+.header-img a{
+    font-size: 1rem;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.6rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.zzz{
+    /* padding: 30px; */
+}
+
+footer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: rgb(22, 97, 107);
+    gap: 10px;
+    line-height: 1.7;
+}
+footer section{
+    margin: 15px 0;
+    width: 25%;
+    padding: 30px 30px;
+    color: white;
+    /* background-color: white; */
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer h1{
+    color: #00f1ff;
+    border-bottom: 2px solid #00f1ff;
+}
+@media(max-width: 480px){ 
+    footer{
+        flex-direction: column;
+        
+    }
+    footer section{
+        width: 90%;
+        padding: 0px 30px;
+    }
+    .menu-toggle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /* cursor: pointer; */
+        font-size: 2rem;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        position: fixed;
+        z-index: 1000;
+        background-color: #1c4a5f;
+        padding: 10px 0;
+        border-bottom: 2px solid white;
+    color: white;
+        
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       
+        justify-content: center;
+        align-items: center;
+    }
+    .header-img-title{
+        font-size: 1.5rem;
+    }
+    .header-img-content{
+        font-size: 1rem;
+    }
+    .main-menu{
+
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-menu ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo span{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .header-img{
+        justify-content: center;   
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        padding: 50px 0;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background: linear-gradient(rgba(141, 141, 141, 0.5), rgba(255, 255, 255, 0.5)), url(/img/logo-bg-content.jpg) no-repeat center center / cover; 
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://placehold.co/600x400/a9d8b8/eee?text=Ảnh+Nền) no-repeat center center / cover;  */
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="/css/danh-muc.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home-body.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <%- include('header') %>
+    <form action="/danh-muc/submit" method="GET">
+        <!-- Ô nhập từ khóa -->
+        <input type="text" name="keyword" placeholder="Nhập từ khóa..." required>
+      
+        <!-- Danh sách chọn -->
+        <select name="type" required>
+          <option value="hoatchat">Tên hoạt chất</option>
+          <option value="congty">Tên công ty</option>
+          <option value="doituong">Đối tượng phòng trừ</option>
+        </select>
+      
+        <!-- Nút gửi -->
+        <button type="submit" class="button-table-click">Tìm kiếm</button>
+      </form>
+      <div class="table-danh-muc">
+        <table border="1" >
+            <thead>
+              <tr>
+                <th>Số thứ tự</th>
+                <th>Loại thuốc</th>
+                <th>Tên hoạt chất</th>
+                <th>Tên thuốc</th>
+                <th>Đối tường phòng trừ</th>
+                <th>Công ty đăng kí</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (listItem!='') { %>
+                <% listItem.forEach((item, index) => { %>
+                  <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= item.type_chemical %></td>
+                    <td><%= item.name_active %></td>
+                    <td><%= item.name_product %></td>
+                    <td><%= item.control %></td>
+                    <td><%= item.com_reg %></td>
+                  </tr>
+                <% }) %>
+              <% } %>
+            </tbody>
+          </table>
+      </div>
+  <script type="module" src="/js/danh-muc.js"></script>    
+</body>
+</html>

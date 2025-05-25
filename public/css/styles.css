@@ -1,246 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    background-color: #2f2f5c;
-    color: white;
-}
-.text-fm-all{
-    color: #2f2f5c;
-    /* font-weight: 600; */
-}
-
-h3{
+html {
     font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f0;
+    color: rgb(22, 97, 107);
 }
 
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+ul.menus li {
+    /* Các thuộc tính mặc định cho li */
+    border-bottom: 2px solid rgb(17, 61, 75);
+    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Tạo hiệu ứng chuyển màu mượt mà */
 }
 
+.size-of-body-content {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 15%;
+}
 
-.menu {
-    list-style-type: none;
+.main-menu a {
+    /* color: #3b3b3b; */
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
     padding: 0;
 }
-
-.menu > li {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.menu > li > a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-}
-
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown li {
-    padding: 8px 16px;
-}
-
-.dropdown li:hover {
-    background-color: #d19b9b;
-}
-
-.menu > li:hover .dropdown {
-    display: block;
-}
-
-.has-dropdown{
-    margin: 10px;
-    padding: 5px;
-    background-color: rgb(201, 199, 86);
-    border-radius: 7px;
-    z-index: 20;
-    font-size: 10px;
-}
-
-.has-dropdown:hover{
-
-    background-color: rgb(5, 51, 36);
-}
-
-.cdivTitle{
-    display: flex;
-    margin: 50px;
-}
-
-.cdivTitle>div>li{
-    /* background-color: #9791ac; */
-    list-style-type: none;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 15px;
-
-}
-
-.titleFooter{
-    /* background-color: rgb(100, 63, 14); */
-    font-size: 30px;
-}
-
-.vidu{
-    background-color: yellowgreen;
-}
-
-.div1{
-    height: 10%;
-    display: flex;
-    /* background-color: #d19b9b; */
-    justify-content: center;
-    padding-top: 1%;
-    border: 1px solid royalblue;
-}
-
-.div2{
-    /* background-color: aquamarine; */
-    height: 90%;
-    /* z-index: 30; */
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2%;
-
-}
-
-.cssImg{
-    width: 100%;
-    border-radius: 2%;
-
-}
-
-.cssDivNayODau{
-    margin: 1%;
-}
-
-.s{
-    text-align: center;
-    font-size: 40px;
-}
-
-ss{
-    /* width: 20%; */
-    text-align: center;
-    font-size: 40px;
-}
-
-.cTheDivLon{
-    display: flex;
-    width: 100%;
-}
-
-.cssL{
-    width: 60%;
-    background-image: url('../img/baiviet1_4.jpg');
-    background-size: cover;
-    background-position: cennter;
-}
-
-.divL{
-    width: 20%;
-    height: auto;
-    display: block;
-}
-.divR{
-    width: 100%o;
-    margin: 10%;
-}
-.divC{
-    width: 100%;
-    height: auto;
-}
-
-.FdivR{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.FdivC{
-    width: 70%;
-    margin: 2%;
-}
-
-.moveImg{
-    background-image: url('../img/baiviet1_4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.divL-firstContent{
-    width: 30%;
-}
-
-.sp{
-    width: 100%;
-}
-
-.divR-firstContent{
-    display: block;
-    width: 70%;
-    background-image: url('../img/baiviet1_4.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-
-.divChildTopR-firstContent{
-    width: 70%;
-}
-
-.square{
-    /* width: 5%;  */
-    height: auto; 
-    margin: 5px;
-}
-
-.square:hover{
-    /* width: 5%;  */
-    height: auto; 
-    margin: 5px;
-    border: 1px solid red;
-}
-
-.divChildBottomL-firstContent{
-    height: 20%;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.divChildTopL-firstContent{
-    height: 80%;
-}
-
-
-
-.insect{
-    display: inline-block; background: none; border: none; padding: 12px 16px; cursor: pointer;
-}
-.dot{
-    background-color: #d19b9b;
-}
-.dot.active {
-    background-color: #810303; /* Màu sắc khi chấm tròn được chọn */
-}
-
-.boxshadow{
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3)
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f0;
+    }
+    .size-of-body-content {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1%;
+    }
+    
 }
